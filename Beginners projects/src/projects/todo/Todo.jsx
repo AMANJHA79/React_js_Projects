@@ -59,16 +59,21 @@ const Todo = () => {
   return (
     <section className='p-8 bg-gray-800 flex flex-col gap-5 items-center justify-between rounded-2xl'>
       <h1 className='text-4xl text-white font-bold border-b-[0.5px] border-b-amber-400 w-full text-center pb-3'>Todo</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder='Enter Todo '
-        className='p-2 outline-none bg-gray-700 text-white'
-        value={inputText}
-        onChange={(e) => setInputText(e.target.value)}
-        />
-        <button type='submit'
-        className='py-2 px-4 bg-green-400 text-black'
-        >Add</button>
-      </form>
+      <form onSubmit={handleSubmit} className="flex gap-2 w-full">
+  <input 
+    type="text" 
+    placeholder="Enter Todo"
+    className="flex-1 p-2 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+    value={inputText}
+    onChange={(e) => setInputText(e.target.value)}
+  />
+  <button 
+    type="submit"
+    className="py-2 px-4 bg-green-500 text-black rounded-lg hover:bg-green-600 transition"
+  >
+    Add
+  </button>
+</form>
 
       {/* Tabs for filtering */}
       <div className='flex gap-4'>
@@ -83,10 +88,10 @@ const Todo = () => {
         ))}
       </div>
 
-      <ul className='w-full'>
+      <ul className='w-full '>
         {
           filteredTodos.map((todo, index) => (
-            <li className='flex gap-4 justify-between items-center bg-gray-700 p-4 rounded-lg mb-2' key={index}>
+            <li className='flex gap-4 justify-between items-center bg-gray-700 p-4 rounded-lg mb-2 transition-all duration-200 hover:bg-gray-600' key={index}>
               <input type="checkbox"
                 onChange={() => handleChange(index)}
                 checked={todo.completed}
