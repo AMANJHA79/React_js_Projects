@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Counter = () => {
     const [count, setCount] = useState(
         Number(localStorage.getItem('countKey')) || 0
     );
     const [input, setInput] = useState(
-        Number(localStorage.getItem('inputKey')) || 0
+        0
     );
     const [isDarkMode, setIsDarkMode] = useState(true);
 
@@ -26,8 +26,9 @@ const Counter = () => {
         setInput(isNaN(num) ? 0 : num);
     };
 
-    localStorage.setItem('countKey', count);
-    localStorage.setItem('inputKey', input);
+    useEffect(() => {
+        localStorage.setItem('countKey', count);
+      }, [count]);
 
     return (
         <section className={`w-full h-screen ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'} flex justify-center items-center`}>
@@ -59,7 +60,10 @@ const Counter = () => {
                     >Dec</button>
                 </div>
                 <button className={`px-6 py-2 rounded-md text-white ${isDarkMode ? 'bg-red-500' : 'bg-red-600'}`}
-                    onClick={() => setCount(0)}
+                    onClick={() => 
+                        setCount(0) 
+
+                    }
                 >
                     Reset
                 </button>
@@ -68,4 +72,4 @@ const Counter = () => {
     )
 }
 
-export default Counter
+export default Counter;
