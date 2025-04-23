@@ -1,0 +1,107 @@
+[
+  {
+    "question": "What is the capital of India?",
+    "options": ["Mumbai", "Delhi", "Kolkata", "Chennai"],
+    "answer": "Delhi"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Mars"
+  },
+  {
+    "question": "Who is the founder of Microsoft?",
+    "options": ["Steve Jobs", "Elon Musk", "Bill Gates", "Mark Zuckerberg"],
+    "answer": "Bill Gates"
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "options": ["H2O", "O2", "CO2", "HO"],
+    "answer": "H2O"
+  },
+  {
+    "question": "Which country won the 2022 FIFA World Cup?",
+    "options": ["France", "Brazil", "Argentina", "Germany"],
+    "answer": "Argentina"
+  },
+  {
+    "question": "Who wrote 'Harry Potter'?",
+    "options": ["J.K. Rowling", "George R.R. Martin", "Suzanne Collins", "Stephen King"],
+    "answer": "J.K. Rowling"
+  },
+  {
+    "question": "Which is the largest mammal?",
+    "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+    "answer": "Blue Whale"
+  },
+  {
+    "question": "What is the square root of 64?",
+    "options": ["6", "8", "7", "9"],
+    "answer": "8"
+  },
+  {
+    "question": "Which gas do plants absorb from the atmosphere?",
+    "options": ["Oxygen", "Hydrogen", "Carbon Dioxide", "Nitrogen"],
+    "answer": "Carbon Dioxide"
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "options": ["Vincent Van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"],
+    "answer": "Leonardo da Vinci"
+  },
+  {
+    "question": "What language is used for styling web pages?",
+    "options": ["HTML", "JQuery", "CSS", "XML"],
+    "answer": "CSS"
+  },
+  {
+    "question": "Which is the smallest prime number?",
+    "options": ["1", "2", "3", "5"],
+    "answer": "2"
+  },
+  {
+    "question": "Which continent is the Sahara Desert located on?",
+    "options": ["Asia", "Africa", "Australia", "South America"],
+    "answer": "Africa"
+  },
+  {
+    "question": "In what year did the Titanic sink?",
+    "options": ["1910", "1912", "1920", "1898"],
+    "answer": "1912"
+  },
+  {
+    "question": "What is the main ingredient in guacamole?",
+    "options": ["Avocado", "Tomato", "Lettuce", "Carrot"],
+    "answer": "Avocado"
+  },
+  {
+    "question": "Which part of the computer is considered the brain?",
+    "options": ["RAM", "Motherboard", "CPU", "Hard Drive"],
+    "answer": "CPU"
+  },
+  {
+    "question": "What is the capital city of Japan?",
+    "options": ["Kyoto", "Osaka", "Tokyo", "Hiroshima"],
+    "answer": "Tokyo"
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "options": ["Isaac Newton", "Albert Einstein", "Nikola Tesla", "Galileo Galilei"],
+    "answer": "Albert Einstein"
+  },
+  {
+    "question": "Which browser is developed by Google?",
+    "options": ["Firefox", "Chrome", "Safari", "Opera"],
+    "answer": "Chrome"
+  },
+  {
+    "question": "What is the full form of HTTP?",
+    "options": [
+      "HyperText Transfer Protocol",
+      "HyperText Transmission Process",
+      "HighText Transfer Protocol",
+      "HyperText Transfer Process"
+    ],
+    "answer": "HyperText Transfer Protocol"
+  }
+]
