@@ -52,7 +52,7 @@ const Dogs = () => {
                     <p>Weight: {dogs[0].min_weight_male} - {dogs[0].max_weight_male} lbs</p>
                 </>
             ) : (
-                <p>No results found</p>
+                // <p>No results found</p>
             )}
         </div>
       </div>
