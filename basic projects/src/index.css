@@ -2,3 +2,17 @@
 *{
     font-family: gilroy;
 }
+
+.clock-container {
+    text-align: center;
+    padding: 2rem;
+    background: #1a1a1a;
+    border-radius: 10px;
+    color: #61dafb;
+  }
+  
+  .clock-container h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: monospace;
+  }
