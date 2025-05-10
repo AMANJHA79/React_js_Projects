@@ -1,5 +1,6 @@
 import React from 'react'
-import Todo from './projects/Todo/Todo'
+// import Todo from './projects/Todo/Todo'
+import Quotes from './projects/Quotes genertor/Quotes'
 // import Clock from './projects/digital clock/Clock'
 // import Calculator from './projects/Basic calculator/Calculator'
 // import Colorpicker from './projects/color picker/Colorpicker'
@@ -12,7 +13,8 @@ const App = () => {
       {/* <Colorpicker /> */}
       {/* <Clock /> */}
       {/* <Calculator /> */}
-      <Todo />
+      {/* <Todo /> */}
+      <Quotes />
     </section>
   )
 }
