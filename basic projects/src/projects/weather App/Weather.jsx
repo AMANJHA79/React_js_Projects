@@ -6,11 +6,11 @@ const Weather = () => {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState('delhi');
 
-  const API_KEY = '2122c379f4ab075570681bc963270c82'
+  
 
   const getWeather = async () => {
     try{
-      const res= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+      const res= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_API_KEY}`)
       console.log(res.data);
       setWeather(res.data);
 

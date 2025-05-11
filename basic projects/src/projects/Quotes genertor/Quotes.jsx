@@ -15,7 +15,7 @@ const Quotes = () => {
       setError(null)
       const res = await axios.get(api, {
         headers: {
-          'X-Api-Key': 'rt9LjpH2QK1qIZuNX27f3A==6R4LvFsPdh5iK8Tb'
+          'X-Api-Key': import.meta.env.VITE_X_API_KEY
         }
       })
       setQuotes(res.data[0])
