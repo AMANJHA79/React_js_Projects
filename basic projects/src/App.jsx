@@ -1,5 +1,7 @@
 import React from 'react'
-import Images from './projects/Gallery/Images'
+// import Images from './projects/Gallery/Images'
+import Quiz from './projects/Quiz App/Quiz'
+// import FormValidation from './projects/Form Validator/Form'
 // import Weather from './projects/weather App/Weather'
 // import Todo from './projects/Todo/Todo'
 // import Quotes from './projects/Quotes genertor/Quotes'
@@ -18,7 +20,9 @@ const App = () => {
       <Todo />
       <Quotes /> */}
       {/* <Weather /> */}
-      <Images />
+      {/* <Images /> */}
+      <Quiz />
+      {/* <FormValidation/> */}
     </section>
   )
 }
