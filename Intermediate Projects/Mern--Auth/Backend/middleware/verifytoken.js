@@ -1,24 +1,21 @@
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 export const verifyToken = (req, res, next) => {
-    const token = req.cookies.token;
-   try {
+  const token = req.cookies.token;
+  try {
     if (!token) {
-        return res.status(403).json({
-            success: false,
-            message: "Token is missing",
-        });
+      return res.status(403).json({
+        success: false,
+        message: "Token is missing",
+      });
     }
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-req.userId = decoded.userId;
-next();
-
-    
-   } catch (error) {
+    req.userId = decoded.userId;
+    next();
+  } catch (error) {
     console.log(error);
     return res.status(500).json({
-        success: false,
-        message: "Server error during login",
+      success: false,
+      message: "Server error during login",
     });
-    
-   }
-}
+  }
+};

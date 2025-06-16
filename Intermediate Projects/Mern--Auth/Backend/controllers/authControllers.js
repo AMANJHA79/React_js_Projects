@@ -6,7 +6,12 @@ dotenv.config();
 import { generateVerificationToken } from "../utils/generateCode.js";
 import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
 import sendEmail from "../utils/sendEmail.js";
-import { generateVerificationEmail,generateWelcomeEmail,generatePasswordResetRequestEmail , generatePasswordResetSuccessEmail } from "../email/emailTemplates.js";
+import {
+  generateVerificationEmail,
+  generateWelcomeEmail,
+  generatePasswordResetRequestEmail,
+  generatePasswordResetSuccessEmail,
+} from "../email/emailTemplates.js";
 
 // ✅ SIGNUP Controller
 export const signup = async (req, res) => {
@@ -112,7 +117,6 @@ export const verifyEmail = async (req, res) => {
   }
 };
 
-
 // ✅ LOGIN Controller (Stub)
 export const login = async (req, res) => {
   const { email, password } = req.body;
@@ -134,9 +138,9 @@ export const login = async (req, res) => {
 
     if (!user.isVerified) {
       return res.status(400).json({
-        success: false, 
+        success: false,
         message: "Email not verified",
-      })
+      });
     }
     generateTokenAndSetCookie(res, user._id);
 
@@ -151,19 +155,13 @@ export const login = async (req, res) => {
         password: undefined,
       },
     });
-
-
-    
   } catch (error) {
     console.error("Login Error:", error);
     res.status(500).json({
       success: false,
       message: "Server error during login",
     });
-    
-    
   }
-  
 };
 
 // ✅ LOGOUT Controller (Stub)
@@ -173,12 +171,8 @@ export const logout = (req, res) => {
   res.status(200).json({
     success: true,
     message: "Logged out successfully",
-  })
-  
-
+  });
 };
-
-
 
 // ✅ FORGOT PASSWORD Controller
 export const forgotPassword = async (req, res) => {
@@ -206,7 +200,6 @@ export const forgotPassword = async (req, res) => {
       success: true,
       message: "Password reset email sent",
     });
-
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -258,7 +251,6 @@ export const resetPassword = async (req, res) => {
       success: true,
       message: "Password reset successfully",
     });
-
   } catch (error) {
     console.error("Reset Password Error:", error);
     res.status(500).json({
@@ -268,6 +260,7 @@ export const resetPassword = async (req, res) => {
   }
 };
 
+// ✅ Check Auth
 export const checkAuth = async (req, res) => {
   try {
     const user = await User.findById(req.userId).select("-password");

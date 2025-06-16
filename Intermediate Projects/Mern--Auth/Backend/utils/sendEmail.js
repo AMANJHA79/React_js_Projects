@@ -1,9 +1,12 @@
 import { transactionalEmailApi } from "../brevo/brevo.config.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const sendEmail = async (to, subject, htmlContent) => {
   const sender = {
-    name: "Aman jha",
-    email: "jhaa09156@gmail.com", // must be verified in Brevo
+    name: process.env.BREVO_NAME,
+    email: process.env.BREVO_REGISTERED_EMAIL,
   };
 
   try {
